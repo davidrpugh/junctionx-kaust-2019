@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/davidrpugh/junctionx-kaust-2019/master?filepath=notebooks%2Fpredicting-solar-power-at-neom.ipynb)
+
 # python-gpu-data-science-project
 
 Repository containing scaffolding for a Python 3-based data science project with GPU acceleration. 
