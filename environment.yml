@@ -4,8 +4,12 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.6
+  - joblib=0.13
   - jupyterlab=1.0
+  - matplotlib=3.1
+  - pandas=0.25
+  - python=3.6
   - pip=19.2
+  - scikit-learn=0.21
   - pip:
     - tensorflow==2.0.0-rc0
