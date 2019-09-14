@@ -32,8 +32,8 @@
       "fill": 1,
       "fillGradient": 1,
       "gridPos": {
-        "h": 7,
-        "w": 10,
+        "h": 6,
+        "w": 8,
         "x": 0,
         "y": 0
       },
@@ -139,11 +139,161 @@
       }
     },
     {
-      "cacheTimeout": null,
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                500
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "5m",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "sum"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "0m",
+        "frequency": "1d",
+        "handler": 1,
+        "name": "1 day forecast telegram alert",
+        "noDataState": "no_data",
+        "notifications": []
+      },
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 6,
-        "w": 5,
-        "x": 10,
+        "w": 7,
+        "x": 8,
+        "y": 0
+      },
+      "hideTimeOverride": false,
+      "id": 19,
+      "legend": {
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "1d forecast",
+          "groupBy": [],
+          "measurement": "csv_import",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "ID",
+              "operator": "=",
+              "value": "GHI(W/m2)"
+            }
+          ]
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 500
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": "0m+1d",
+      "title": "Tomorrow Forecast alert",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 15,
         "y": 0
       },
       "id": 14,
@@ -248,9 +398,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 15,
+        "h": 5,
+        "w": 5,
+        "x": 19,
         "y": 0
       },
       "id": 16,
@@ -372,7 +522,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 7
+        "y": 6
       },
       "hideTimeOverride": false,
       "id": 17,
@@ -490,7 +640,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 7
+        "y": 6
       },
       "id": 21,
       "interval": "",
@@ -600,7 +750,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 13
+        "y": 12
       },
       "id": 2,
       "legend": {
@@ -716,7 +866,7 @@
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 13
+        "y": 12
       },
       "id": 4,
       "legend": {
@@ -834,7 +984,7 @@
         "h": 6,
         "w": 6,
         "x": 12,
-        "y": 13
+        "y": 12
       },
       "id": 3,
       "legend": {
@@ -951,7 +1101,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 13
+        "y": 12
       },
       "id": 5,
       "legend": {
@@ -1071,7 +1221,7 @@
         "h": 8,
         "w": 11,
         "x": 0,
-        "y": 19
+        "y": 18
       },
       "id": 6,
       "legend": {
@@ -1191,7 +1341,7 @@
         "h": 8,
         "w": 13,
         "x": 11,
-        "y": 19
+        "y": 18
       },
       "id": 13,
       "legend": {
@@ -1311,7 +1461,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 27
+        "y": 26
       },
       "id": 7,
       "legend": {
@@ -1430,7 +1580,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 27
+        "y": 26
       },
       "id": 8,
       "legend": {
@@ -1549,7 +1699,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 27
+        "y": 26
       },
       "id": 12,
       "legend": {
@@ -1668,7 +1818,7 @@
         "h": 7,
         "w": 9,
         "x": 0,
-        "y": 35
+        "y": 34
       },
       "id": 9,
       "legend": {
@@ -1790,7 +1940,7 @@
         "h": 7,
         "w": 14,
         "x": 9,
-        "y": 35
+        "y": 34
       },
       "id": 15,
       "legend": {
@@ -1942,7 +2092,7 @@
         "h": 8,
         "w": 11,
         "x": 0,
-        "y": 42
+        "y": 41
       },
       "id": 10,
       "legend": {
@@ -2044,156 +2194,6 @@
         "align": false,
         "alignLevel": null
       }
-    },
-    {
-      "alert": {
-        "alertRuleTags": {},
-        "conditions": [
-          {
-            "evaluator": {
-              "params": [
-                500
-              ],
-              "type": "lt"
-            },
-            "operator": {
-              "type": "and"
-            },
-            "query": {
-              "params": [
-                "A",
-                "5m",
-                "now"
-              ]
-            },
-            "reducer": {
-              "params": [],
-              "type": "sum"
-            },
-            "type": "query"
-          }
-        ],
-        "executionErrorState": "alerting",
-        "for": "0m",
-        "frequency": "1d",
-        "handler": 1,
-        "name": "1 day forecast telegram alert",
-        "noDataState": "no_data",
-        "notifications": []
-      },
-      "aliasColors": {},
-      "bars": true,
-      "dashLength": 10,
-      "dashes": false,
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 9,
-        "x": 11,
-        "y": 42
-      },
-      "hideTimeOverride": false,
-      "id": 19,
-      "legend": {
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": true,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": true,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "1d forecast",
-          "groupBy": [],
-          "measurement": "csv_import",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "ID",
-              "operator": "=",
-              "value": "GHI(W/m2)"
-            }
-          ]
-        }
-      ],
-      "thresholds": [
-        {
-          "colorMode": "critical",
-          "fill": true,
-          "line": true,
-          "op": "lt",
-          "value": 500
-        }
-      ],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": "0m+1d",
-      "title": "1 days Forecast alert",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     }
   ],
   "refresh": false,
@@ -2205,7 +2205,7 @@
   },
   "time": {
     "from": "2018-12-09T21:00:00.000Z",
-    "to": "2018-12-16T20:59:00.000Z"
+    "to": "2018-12-10T20:59:00.000Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -2224,5 +2224,5 @@
   "timezone": "",
   "title": "JunctionX",
   "uid": "S2MOS85Zk",
-  "version": 8
+  "version": 11
 }
