@@ -369,8 +369,8 @@
       "fill": 1,
       "fillGradient": 1,
       "gridPos": {
-        "h": 7,
-        "w": 24,
+        "h": 6,
+        "w": 12,
         "x": 0,
         "y": 7
       },
@@ -479,6 +479,115 @@
     },
     {
       "aliasColors": {
+        "GHI(W/m2)": "super-light-blue"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 21,
+      "interval": "",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "GHI(W/m2)",
+          "groupBy": [],
+          "measurement": "csv_import",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "ID",
+              "operator": "=",
+              "value": "GHI(W/m2)"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": "364d",
+      "title": "Historian : Last Year",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
         "titi": "rgb(43, 112, 213)"
       },
       "bars": true,
@@ -491,7 +600,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 14
+        "y": 13
       },
       "id": 2,
       "legend": {
@@ -607,7 +716,7 @@
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 14
+        "y": 13
       },
       "id": 4,
       "legend": {
@@ -725,7 +834,7 @@
         "h": 6,
         "w": 6,
         "x": 12,
-        "y": 14
+        "y": 13
       },
       "id": 3,
       "legend": {
@@ -842,7 +951,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 14
+        "y": 13
       },
       "id": 5,
       "legend": {
@@ -962,7 +1071,7 @@
         "h": 8,
         "w": 11,
         "x": 0,
-        "y": 20
+        "y": 19
       },
       "id": 6,
       "legend": {
@@ -1079,10 +1188,10 @@
       "fill": 1,
       "fillGradient": 1,
       "gridPos": {
-        "h": 7,
-        "w": 10,
+        "h": 8,
+        "w": 13,
         "x": 11,
-        "y": 20
+        "y": 19
       },
       "id": 13,
       "legend": {
@@ -1188,125 +1297,6 @@
     {
       "aliasColors": {
         "csv_import": "dark-orange",
-        "titi": "rgb(43, 112, 213)",
-        "wind_speed(m/s)": "blue"
-      },
-      "bars": true,
-      "cacheTimeout": null,
-      "dashLength": 10,
-      "dashes": false,
-      "fill": 1,
-      "fillGradient": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 18,
-        "y": 27
-      },
-      "id": 8,
-      "legend": {
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pluginVersion": "6.3.5",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "alias": "titi",
-          "yaxis": 1
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "GHI(W/m2)",
-          "groupBy": [],
-          "measurement": "csv_import",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "ID",
-              "operator": "=",
-              "value": "wind_speed(m/s)"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "GHI(W/m2)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "csv_import": "dark-orange",
         "rh(%)": "purple",
         "titi": "rgb(43, 112, 213)",
         "wind_speed(m/s)": "blue"
@@ -1318,10 +1308,10 @@
       "fill": 1,
       "fillGradient": 1,
       "gridPos": {
-        "h": 9,
-        "w": 13,
+        "h": 8,
+        "w": 12,
         "x": 0,
-        "y": 28
+        "y": 27
       },
       "id": 7,
       "legend": {
@@ -1438,11 +1428,11 @@
       "fillGradient": 1,
       "gridPos": {
         "h": 7,
-        "w": 10,
-        "x": 0,
-        "y": 37
+        "w": 6,
+        "x": 12,
+        "y": 27
       },
-      "id": 9,
+      "id": 8,
       "legend": {
         "avg": true,
         "current": true,
@@ -1476,7 +1466,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "SWDIR(W/m2)",
+          "alias": "GHI(W/m2)",
           "groupBy": [],
           "measurement": "csv_import",
           "orderByTime": "ASC",
@@ -1497,7 +1487,7 @@
             {
               "key": "ID",
               "operator": "=",
-              "value": "SWDIR(W/m2)"
+              "value": "wind_speed(m/s)"
             }
           ]
         }
@@ -1506,7 +1496,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "SWDIR(W/m2)",
+      "title": "GHI(W/m2)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1557,9 +1547,9 @@
       "fillGradient": 1,
       "gridPos": {
         "h": 7,
-        "w": 8,
-        "x": 10,
-        "y": 37
+        "w": 6,
+        "x": 18,
+        "y": 27
       },
       "id": 12,
       "legend": {
@@ -1664,6 +1654,125 @@
     },
     {
       "aliasColors": {
+        "csv_import": "dark-orange",
+        "titi": "rgb(43, 112, 213)",
+        "wind_speed(m/s)": "blue"
+      },
+      "bars": true,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 1,
+      "fillGradient": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 9,
+        "x": 0,
+        "y": 35
+      },
+      "id": 9,
+      "legend": {
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pluginVersion": "6.3.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "titi",
+          "yaxis": 1
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "SWDIR(W/m2)",
+          "groupBy": [],
+          "measurement": "csv_import",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "ID",
+              "operator": "=",
+              "value": "SWDIR(W/m2)"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SWDIR(W/m2)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
         "Actual Solar Power (W/m2)": "red",
         "Predicted Solar Power (W/m2)": "blue",
         "SWDNI(W/m2)": "red",
@@ -1679,9 +1788,9 @@
       "fillGradient": 1,
       "gridPos": {
         "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 44
+        "w": 14,
+        "x": 9,
+        "y": 35
       },
       "id": 15,
       "legend": {
@@ -1833,7 +1942,7 @@
         "h": 8,
         "w": 11,
         "x": 0,
-        "y": 51
+        "y": 42
       },
       "id": 10,
       "legend": {
@@ -1935,6 +2044,156 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                500
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "5m",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "sum"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "0m",
+        "frequency": "1d",
+        "handler": 1,
+        "name": "1 day forecast telegram alert",
+        "noDataState": "no_data",
+        "notifications": []
+      },
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 9,
+        "x": 11,
+        "y": 42
+      },
+      "hideTimeOverride": false,
+      "id": 19,
+      "legend": {
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "1d forecast",
+          "groupBy": [],
+          "measurement": "csv_import",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "ID",
+              "operator": "=",
+              "value": "GHI(W/m2)"
+            }
+          ]
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 500
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": "0m+1d",
+      "title": "1 days Forecast alert",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": false,
@@ -1945,8 +2204,8 @@
     "list": []
   },
   "time": {
-    "from": "2018-12-16T21:00:00.000Z",
-    "to": "2018-12-23T20:59:00.000Z"
+    "from": "2018-12-09T21:00:00.000Z",
+    "to": "2018-12-16T20:59:00.000Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1965,5 +2224,5 @@
   "timezone": "",
   "title": "JunctionX",
   "uid": "S2MOS85Zk",
-  "version": 31
+  "version": 8
 }
